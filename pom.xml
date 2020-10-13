@@ -60,6 +60,7 @@
         <module>eureka-demo-7001</module>
         <module>provider-8001</module>
         <module>consumer-9001</module>
+        <module>consumer-resttemplate-9002</module>
     </modules>
 
 </project>
