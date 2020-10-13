@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>comsumer-9001</artifactId>
+    <artifactId>consumer-9001</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>consumer-9001</name>
     <description>Demo project for Spring Boot</description>
@@ -33,12 +33,7 @@
     </dependencies>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
+        <finalName>consumer-9001</finalName>
     </build>
 
 </project>
