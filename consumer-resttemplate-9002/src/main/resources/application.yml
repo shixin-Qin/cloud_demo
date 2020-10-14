@@ -2,3 +2,13 @@ server:
   port: 9002
   servlet:
     context-path: /consumer
+
+spring:
+  application:
+    #定义应用名称，即服务名称
+    name: consumer-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/eureka

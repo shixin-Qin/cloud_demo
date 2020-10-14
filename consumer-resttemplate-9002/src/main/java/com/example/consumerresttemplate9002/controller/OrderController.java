@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 @RequestMapping("/order")
 public class OrderController {
 
-    private static final String REST_URL_PREFIX = "http://localhost:8001/provider";
+    private static final String REST_URL_PREFIX = "http://PROVIDER-SERVER/provider";
 
     @Autowired
     private RestTemplate restTemplate;

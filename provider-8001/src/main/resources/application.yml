@@ -11,3 +11,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/eureka
+  instance:
+    prefer-ip-address: true     #将IP注册到eureka中，如果为false默认注册主机名
