@@ -1,0 +1,26 @@
+server: 
+  port: 4001
+ 
+spring: 
+  application:
+    name: zuul-gateway
+ 
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://localhost:7001/eureka/eureka
+  instance:
+    prefer-ip-address: true
+
+
+# 测试的访问地址：http://localhost:4001/zuul2/provider/order/one
+# 转发时zuul2去掉，provider不去掉
+zuul:
+  prefix: /zuul2
+  # 忽略所有服务(默认会映射所有微服务)
+  ignored-services: "*"
+  routes:
+    my-provider:
+      serviceId: provider-server
+      path: /provider/**
+      stripPrefix: false

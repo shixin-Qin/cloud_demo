@@ -62,6 +62,7 @@
         <module>provider-8002</module>
         <module>consumer-9001</module>
         <module>consumer-resttemplate-9002</module>
+        <module>zuul-4001</module>
     </modules>
 
 </project>
