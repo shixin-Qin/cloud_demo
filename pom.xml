@@ -64,6 +64,7 @@
         <module>consumer-resttemplate-9002</module>
         <module>zuul-4001</module>
         <module>config-server-4003</module>
+        <module>config-client-9005</module>
     </modules>
 
 </project>
