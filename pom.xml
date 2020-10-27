@@ -63,6 +63,7 @@
         <module>consumer-9001</module>
         <module>consumer-resttemplate-9002</module>
         <module>zuul-4001</module>
+        <module>config-server-4003</module>
     </modules>
 
 </project>
