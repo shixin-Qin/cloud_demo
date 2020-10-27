@@ -1,2 +1,21 @@
 server: 
   port: 9005
+
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+data:
+  env: NaN
+  user:
+    username: NaN
+    password: NaN
+
+#  其中 management 是关于 actuator 相关的，自动刷新配置的时候需要使用。
+#  修改后post请求生效 http://localhost:9005/actuator/refresh
+#  data 部分是当无法读取配置中心的配置时，使用此配置，以免项目无法启动
