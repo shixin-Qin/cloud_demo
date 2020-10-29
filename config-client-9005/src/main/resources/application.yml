@@ -20,7 +20,7 @@ data:
 #  修改后post请求生效 http://localhost:9005/actuator/refresh
 #  data 部分是当无法读取配置中心的配置时，使用此配置，以免项目无法启动
 
-配置rabbitmq使用广播，多个客户端一起refresh
+#配置rabbitmq使用广播，多个客户端一起refresh
 spring:
   rabbitmq:
     host: localhost
