@@ -1,7 +1,41 @@
+eureka:
+  client:
+    serviceUrl:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://localhost:7001/eureka/eureka
+  instance:
+    preferIpAddress: true
+
 spring:
   profiles:
     active: dev
 
+#直接连接config-server
+#---
+#spring:
+#  profiles: prod
+#  application:
+#    name: config-single-client
+#  cloud:
+#    config:
+#      uri: http://localhost:4003
+#      label: main
+#      profile: prod
+#
+#
+#---
+#spring:
+#  profiles: dev
+#  application:
+#    name: config-single-client
+#  cloud:
+#    config:
+#      uri: http://localhost:4003
+#      label: main
+#      profile: dev
+
+#通过eureka
 ---
 spring:
   profiles: prod
@@ -9,9 +43,11 @@ spring:
     name: config-single-client
   cloud:
     config:
-      uri: http://localhost:4003
       label: main
       profile: prod
+      discovery:
+        enabled: true
+        service-id: config-single-server
 
 
 ---
@@ -21,6 +57,8 @@ spring:
     name: config-single-client
   cloud:
     config:
-      uri: http://localhost:4003
-      label: main
-      profile: dev
+      label: main  #指定仓库分支
+      profile: dev   #指定版本 本例中建立了dev 和 prod两个版本
+      discovery:
+        enabled: true  # 开启
+        service-id: config-single-server # 指定配置中心服务端的server-id
