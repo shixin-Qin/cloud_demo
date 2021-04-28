@@ -69,6 +69,7 @@
         <module>zuul-4001</module>
         <module>config-server-4003</module>
         <module>config-client-9005</module>
+        <module>main-start-demo</module>
     </modules>
 
 </project>
